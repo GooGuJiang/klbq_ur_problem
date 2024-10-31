@@ -13,8 +13,8 @@ const App = () => {
   const presetImageUrl = "./images/mask.png";
   const fallbackImageUrl = "./images/fallback.jpg";
 
-  const isValidQQNumber = (qq) => {
-    return /^[1-9][0-9]{4,10}$/.test(qq);
+  const isValidQQNumber = (qq: string) => {
+      return /^[1-9][0-9]{4,10}$/.test(qq);
   };
 
   const fetchAvatar = async () => {
