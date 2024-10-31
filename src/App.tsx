@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import CryptoJS from "crypto-js";
-import { FaDownload, FaCopy } from "react-icons/fa6";
+import { FaDownload, FaCopy , FaDeleteLeft } from "react-icons/fa6";
 import debounce from 'lodash/debounce';
 import ReactLoading from 'react-loading';
 
@@ -203,7 +203,7 @@ const App = () => {
                               setId("");
                               localStorage.removeItem("qqId");
                             }}>
-                            ✖
+                            <FaDeleteLeft />
                           </button>
                         </div>
                       )}
