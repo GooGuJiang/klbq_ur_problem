@@ -13,7 +13,7 @@ CORS(app)
 cache = Cache(app, config={'CACHE_TYPE': 'simple', 'CACHE_DEFAULT_TIMEOUT': 604800})  # 缓存一周 (604800 秒)
 
 @app.route('/avatar/<int:qq_id>')
-@cache.cached(timeout=604800, query_string=True)
+@cache.cached(timeout=3600, query_string=True)
 def proxy_avatar(qq_id):
     avatar_url = f"https://q1.qlogo.cn/g?b=qq&nk={qq_id}&s=640"
     
